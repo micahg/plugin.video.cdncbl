@@ -123,7 +123,6 @@ class SportsnetNow:
         ap.sessionDevice(self)
 
         settings = Settings.instance().get(self.getRequestorID())
-        channels = settings['CHANNELS']
 
         result = ap.preAuthorize(self, ['SNEast', 'SNOne', 'SNOntario', 'SNWest',
                                         'SNPacific', 'SN360', 'SNWorld'])
