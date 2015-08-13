@@ -5,7 +5,6 @@ def my_time2isoz(t=None):
     This method is used to monkey patch tme2isoz from cookielib. On 32-bit
     platforms cookies that expire too far in the future cause exceptions.
     """
-    print "*** MICAH *** my_time2isoz"
     from datetime import datetime, timedelta
     if t is None:
         dt = datetime.now()
@@ -19,7 +18,6 @@ def my_lwp_cookie_str(cookie):
     This method is used to monkey patch lwp_cookie_str from _LWPCookieJar. See
     my_time2isoz for a description of the problem.
     """
-    print "*** MICAH *** my_lwp_cookie_str"
     from cookielib import join_header_words
     h = [(cookie.name, cookie.value),
          ("path", cookie.path),
